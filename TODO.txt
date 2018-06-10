@@ -1,3 +1,0 @@
-the server serves blog posts from files
-    all files from a directory
-    just throw them at the user
