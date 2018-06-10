@@ -1,4 +1,8 @@
-﻿<div>
+﻿@using System.Collections
+<div>
     hello world!
-    <pre>@ViewData["post"]</pre>
+    @foreach (var post in ViewData["posts"] as IEnumerable<string>)
+    {
+        <pre>@post</pre>
+    }
 </div>

@@ -10,8 +10,8 @@ namespace blogf.Controllers
         {
             var rootDir = new DirectoryInfo(@"c:\stuff\content");
             var fileInfos = rootDir.GetFiles("*.txt");
-            var post = System.IO.File.ReadAllText(fileInfos.First().FullName);
-            ViewData["post"] = post;
+            var posts = fileInfos.Select(x => System.IO.File.ReadAllText(x.FullName));
+            ViewData["posts"] = posts;
             return View();
         }
     }
